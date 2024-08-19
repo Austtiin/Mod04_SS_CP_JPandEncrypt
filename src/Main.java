@@ -29,9 +29,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CryptoClass cryptoHelper = new CryptoClass();
+        CryptoClass Crypto = new CryptoClass();
 
         while (true) {
+            //Menu to select the option
             System.out.println("Select an option:");
             System.out.println("1. Encrypt/Decrypt from file");
             System.out.println("2. Encrypt/Decrypt from keyboard input");
@@ -48,7 +49,7 @@ public class Main {
                         CryptoClass.processFile(fileName);
                         break;
                     case 2:
-                        cryptoHelper.processInput();
+                        Crypto.processInput();
                         break;
                     case 3:
                         System.out.println("Exiting...");
