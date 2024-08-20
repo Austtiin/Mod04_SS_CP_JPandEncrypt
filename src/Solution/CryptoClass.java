@@ -1,4 +1,4 @@
-//CryptoClass.java
+package Solution;//Solution.CryptoClass.java
 //This is the class that will handle the encryption and decryption of the input
 
 //Austin Stephens
@@ -12,6 +12,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CryptoClass {
+    //setting variables for the algorithm and key
+    private static final String ALGORITHM = "AES";
+    //key for the encryption
+    private static final byte[] KEY = "PROFESSORZayass!".getBytes();
+
 
     public static void processFile(String fileName) throws Exception {
         //read our file
@@ -30,7 +35,7 @@ public class CryptoClass {
 
     //Process the input from the user method
     //throws exception if there is an error
-    public void processInput() throws Exception {
+    public void processInput(String input) throws Exception {
         //new scanner object
         Scanner scanner = new Scanner(System.in);
 
